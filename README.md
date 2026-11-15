@@ -1,5 +1,5 @@
 # PROJECT T.E.R.R.A.
-**Tethered Emergency Reconnaissance & Rescue Assistant** - a low-cost (~Rs 9,610) tethered rescue rover for collapsed-building search and rescue.
+**Tethered Emergency Reconnaissance & Rescue Assistant** - a  tethered rescue rover for collapsed-building search and rescue.
 
 ## Why
 - Wireless fails inside rubble, so a 10 m CAT6 tether carries power, video, control and alerts.
