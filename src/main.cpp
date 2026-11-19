@@ -25,7 +25,7 @@ static void taskSense(void *) {
     t.gas = analogRead(PIN_GAS);
     t.heat = digitalRead(PIN_HEAT) == HIGH;
 
-    uint16_t lo = 1023, hi = 0;
+    uint16_t lo = ADC_MAX, hi = 0;
     uint32_t start = millis();
     while (millis() - start < SOUND_WINDOW_MS) {
       uint16_t v = analogRead(PIN_SOUND);
