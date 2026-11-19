@@ -26,8 +26,8 @@
 #else 
   constexpr uint16_t ADC_MAX = 4095;
 #endif
-constexpr uint16_t GAS_ALERT_RAW = (unit32_t)ADC_MAX * 40/100; // 40% of full scale
-constexpr uint16_t SOUND_ALERT_RAW = (unit32_t)ADC_MAX * 30/100; // 30% of full scale
+constexpr uint16_t GAS_ALERT_RAW = (uint32_t)ADC_MAX * 40/100; // 40% of full scale
+constexpr uint16_t SOUND_ALERT_RAW = (uint32_t)ADC_MAX * 30/100; // 30% of full scale
 constexpr uint16_t SOUND_WINDOW_MS = 50;
 
 // ---------- Timing ----------
