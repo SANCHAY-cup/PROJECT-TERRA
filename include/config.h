@@ -21,8 +21,13 @@
 #endif
 
 // ---------- Thresholds (calibrate on the real sensors!) ----------
-constexpr uint16_t GAS_ALERT_RAW   = 400;  // raw ADC above this = toxic gas
-constexpr uint16_t SOUND_ALERT_RAW = 300;  // peak-to-peak above this = possible survivor
+#if defined(TERRA_NANO)
+  constexpr uint16_t ADC_MAX = 1023;
+#else 
+  constexpr unit16_t ADC_MAX = 4095;
+#endif
+constexpr unit16_t GAS_ALERT_RAW = (unit32_t)ADC_MAX * 40/100; // 40% of full scale
+constexpr unit16_t SOUND_ALERT_RAW = (unit32_t)ADC_MAX * 30/100; // 30% of full scale
 constexpr uint16_t SOUND_WINDOW_MS = 50;
 
 // ---------- Timing ----------
